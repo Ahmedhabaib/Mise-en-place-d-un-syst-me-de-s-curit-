@@ -2,6 +2,8 @@
 
 This project is the result of a final year thesis aimed at setting up a security system for a company. It integrates various open-source solutions to enhance network security and system administration, focusing on virtualization, VPN setup, firewall configurations, and proxy servers.
 
+**[Click here to view the full PDF of the project.](https://raw.githubusercontent.com/Ahmedhabaib/Setting-up-a-security-system/a7b254fac92aa9014936991c06e4a02143b3c5ac/Mise%20en%20place%20d%E2%80%99un%20syst%C3%A9me%20de%20s%C3%A9curit%C3%A9.pdf)**
+
 ## Project Overview
 
 The main objectives of this project were:
