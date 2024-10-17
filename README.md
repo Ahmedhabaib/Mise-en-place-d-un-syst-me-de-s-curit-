@@ -1,66 +1,66 @@
-Djagora Network Security System
-Project Overview
-This project aims to implement a robust network security system for the Djagora company. The project was part of our final year study in Computer Systems Engineering at the Faculty of Sciences of Sfax. The goal was to secure the company’s network infrastructure while allowing authorized remote access using open-source solutions.
+# Security System Implementation 
 
-Features
-Virtual Private Network (VPN): Secure remote access using OpenVPN.
-Firewall Configuration: Implemented a firewall using PFsense to monitor and control network traffic.
-Proxy Server: Set up a proxy server for enhanced security and control over internet usage.
-FTP Server: Installed and configured an FTP server for secure file transfer.
-Technologies Used
-PFsense: Open-source firewall and router software.
-OpenVPN: For secure remote access.
-Linux (Debian, Ubuntu): Operating system used for server installations.
-Squid Proxy: Web proxy for controlling internet access.
-FTP (vsftpd): For file transfer needs.
-Installation Guide
-Prerequisites
-Linux Server: Ensure you have a Linux-based system (Debian or Ubuntu preferred) for the installations.
-Internet Access: For downloading necessary software packages and updates.
-Basic Network Infrastructure: Network switches, routers, and client machines.
-Installation Steps
-1. Install OpenVPN
-Update the server:
-bash
-Copy code
-sudo apt-get update && sudo apt-get upgrade
-Download and install OpenVPN:
-bash
-Copy code
-wget https://raw.githubusercontent.com/angristan/openvpn-install/master/openvpn-install.sh
-chmod +x openvpn-install.sh
-./openvpn-install.sh
-2. Install PFsense
-Download and install PFsense as a firewall.
-Access PFsense through its web interface (https://192.168.1.1), and configure rules for VPN and other network traffic.
-3. Install Squid Proxy Server
-Install Squid:
-bash
-Copy code
-sudo apt-get install squid
-Configure Squid via its configuration file:
-bash
-Copy code
-nano /etc/squid/squid.conf
-4. Install and Configure FTP Server (vsftpd)
-Install vsftpd:
-bash
-Copy code
-sudo apt-get install vsftpd
-Configure vsftpd:
-bash
-Copy code
-nano /etc/vsftpd.conf
-Usage
-Remote Access: Authorized users can connect to the company’s network using the VPN for secure and encrypted communication.
-Firewall: PFsense monitors and filters incoming and outgoing traffic to protect the network from unauthorized access.
-Proxy Server: Controls internet access and monitors user activities.
-FTP Server: Provides a secure method for file transfers between remote users and the company.
-Future Improvements
-Implement intrusion detection and prevention systems (IDS/IPS).
-Expand the VPN service to handle more clients simultaneously.
-Contributors
-Ahmed Habaib
-Islem Khlifi
-License
-This project is licensed under the MIT License.
+This project is the result of a final year thesis aimed at setting up a security system for a company. It integrates various open-source solutions to enhance network security and system administration, focusing on virtualization, VPN setup, firewall configurations, and proxy servers.
+
+## Project Overview
+
+The main objectives of this project were:
+1. **Virtualization**: Implementing a virtualized environment using Proxmox VE for flexible and cost-effective system management.
+2. **VPN Setup**: Securing remote access via OpenVPN, ensuring secure communication between remote and internal systems.
+3. **Firewall**: Configuring and deploying pfSense to monitor and control network traffic with robust filtering rules.
+4. **Proxy Server**: Installing and configuring Squid proxy for improved network traffic management and user authentication.
+
+### Key Features
+- **Proxmox VE**: Provides a virtualization environment to host different servers in an efficient and isolated manner.
+- **OpenVPN**: Ensures encrypted communication for remote connections to the internal network.
+- **pfSense Firewall**: Provides network security through stateful packet inspection and traffic filtering.
+- **Squid Proxy**: Enables network traffic filtering and user authentication for enhanced security and management.
+
+## Tools and Technologies
+- **Proxmox VE**: Virtualization platform.
+- **OpenVPN**: Virtual Private Network (VPN) solution.
+- **pfSense**: Firewall and router solution.
+- **Squid**: Proxy server for web traffic filtering.
+- **Linux Distributions**: Debian and Ubuntu used for hosting services.
+
+## System Components
+- **VPN Server**: Provides secure remote access.
+- **FTP Server**: For file transfers, essential for VPN client setup.
+- **Firewall Rules**: Configured using pfSense to filter and protect network traffic.
+- **Proxy Server**: Configured using Squid for caching and filtering HTTP requests.
+
+## Installation and Setup
+The installation and configuration process involves several steps for each component:
+
+1. **Proxmox VE Installation**:
+   - Download and install the Proxmox VE distribution.
+   - Configure virtual machines for different services.
+
+2. **OpenVPN Installation**:
+   - Install OpenVPN on a Debian-based VM.
+   - Configure VPN access, assign IP addresses, and set up encryption.
+
+3. **pfSense Firewall**:
+   - Install pfSense on a virtual machine.
+   - Configure WAN and LAN interfaces, filtering rules, and VPN pass-through.
+
+4. **Squid Proxy Setup**:
+   - Install Squid on Ubuntu.
+   - Configure access control lists (ACLs) and user authentication.
+
+## Network Architecture
+The following changes were made to the network infrastructure:
+- Implementation of a virtualized server architecture using Proxmox VE.
+- Integration of VPN, FTP, Firewall, and Proxy services into the network for comprehensive security.
+
+## Future Improvements
+- **IDS/IPS Integration**: Implementing intrusion detection and prevention systems for enhanced security.
+- **Monitoring Tools**: Adding network monitoring tools for real-time analysis.
+
+## Contributors
+- Ahmed HABAIB
+- Islem KHLIFI
+
+## License
+This project is licensed under the [MIT License](LICENSE).
+
